@@ -15,7 +15,7 @@ resource "aws_vpc_security_group_ingress_rule" "ssh_from_my_ip" {
   to_port           = 22
 }
 
-resource "aws_vpc_security_group_ingress_rule" "allow_http_from_enywhere" {
+resource "aws_vpc_security_group_ingress_rule" "allow_http_from_anywhere" {
   security_group_id = aws_security_group.dove-sg.id
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 80
