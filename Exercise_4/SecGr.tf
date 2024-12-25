@@ -1,7 +1,8 @@
 resource "aws_security_group" "dove-sg" {
   name        = "dove-sg"
   description = "Security Group with dynamic rules"
-
+  revoke_rules_on_delete = true
+  
   tags = {
     Name    = "dove-sg"
     Project = "dove"
